@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Paper, IconButton } from "@mui/material";
+import { Paper, IconButton, Box } from "@mui/material";
 import { Search } from "@mui/icons-material";
 
 const SearchBar = () => {
@@ -19,15 +19,18 @@ const SearchBar = () => {
 	};
 
 	return (
-		<Paper
+		<Box
 			component="form"
 			onSubmit={handleSubmit}
 			sx={{
-				borderRadius: 20,
-				border: "1px solid #e3e3e3",
+				borderRadius: 5,
+				border: "2px solid #434343",
 				pl: 2,
 				boxShadow: "none",
 				mr: { sm: 5 },
+                display: "flex",
+                alignItems:"center",
+                color:"white"
 			}}
 		>
 			<input
@@ -39,7 +42,7 @@ const SearchBar = () => {
 			<IconButton type="submit" sx={{ p: "10px", color: "red" }}>
 				<Search />
 			</IconButton>
-		</Paper>
+		</Box>
 	);
 };
 

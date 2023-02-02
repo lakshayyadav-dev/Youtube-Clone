@@ -3,6 +3,7 @@ import { Stack } from "@mui/material";
 import { Link } from "react-router-dom";
 import { logo } from "../utils/constants";
 import SearchBar from "./SearchBar";
+import {Typography} from "@mui/material";
 
 const Navbar = () => (
 	<Stack
@@ -12,7 +13,10 @@ const Navbar = () => (
 		sx={{ position: "sticky", background: "#000", top: 0, justifyContent: "space-between" }}
 	>
 		<Link to="/" style={{ display: "flex", alignItems: "center" }}>
-            <img src={logo} alt="logo" height={45}/>
+            {/* <img src={logo} alt="logo" height={45}/> */}
+            <Typography variant="h4" color="#FFF" fontWeight="bold">
+                Youtube<span style={{color:"red"}}>Clone</span>
+            </Typography>
         </Link>
         <SearchBar />
 	</Stack>
